@@ -70,38 +70,40 @@
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   color: #4386bf;
-
   font-weight: 100;
 }
 
 .add__book {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 100%;
-  margin: 50px 0;
-  gap: 150px;
+  margin: 0 50px 100px 50px;
+  gap: 20px;
 }
 
 .add__book-input {
-  width: 500px;
+  width: 600px;
   padding: 20px 40px;
   border: 1px solid #d5d5d5;
 }
 
 .add__book-heading {
   margin: 20px 50px;
+  color: #888;
+  border-top: 2px solid #d5d5d5;
+  padding-top: 20px;
 }
 
 .add__book-select {
   padding: 0 20px;
-  width: 200px;
+  width: 400px;
   background-color: white;
 }
 
 .add__book-btn {
   color: white;
   background-color: #0290ff;
-  padding: 0 20px;
+  padding: 0 50px;
   border-color: #d5d5d5;
   font-weight: bold;
 }
