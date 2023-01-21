@@ -9,6 +9,7 @@ body {
   gap: 100px;
   background-color: white;
   margin: 50px;
+  border: 1px solid rgba(198, 198, 198, 0.99);
 }
 
 .nav__list {
