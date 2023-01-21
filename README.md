@@ -28,7 +28,7 @@
 
 > Describe your project in 1 or 2 sentences.
 
-**[Book Store]** is a digital store of books .
+**[Book Store]** is a digital store of books . 
 
 ## 🛠 Built With <a name="built-with"></a>
 

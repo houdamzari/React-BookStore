@@ -1,0 +1,120 @@
+.book {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 200px;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  margin: 0 100px;
+  padding: 20px 0;
+  border: 1px solid rgba(198, 198, 198, 0.99);
+}
+
+.book__icon {
+  width: 60px;
+  height: 50px;
+}
+
+.book__progress {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.book__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.book__span {
+  font-weight: 100;
+  color: #cfcfcf;
+  font-size: 18px;
+}
+
+.book-author {
+  color: #4386bf;
+}
+
+.book__current-chapter {
+  color: #b1b1b1;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.book__current-heading {
+  font-weight: 100;
+}
+
+.book__current-btn {
+  padding: 10px 20px;
+  background-color: #0290ff;
+  border: none;
+  color: white;
+}
+
+.book__info-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.book__info-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #4386bf;
+  font-weight: 100;
+}
+
+.add__book {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0 50px 100px 50px;
+  gap: 20px;
+}
+
+.add__book-input {
+  width: 600px;
+  padding: 20px 40px;
+  border: 1px solid #d5d5d5;
+}
+
+.add__book-heading {
+  margin: 20px 50px;
+  color: #888;
+  border-top: 2px solid #d5d5d5;
+  padding-top: 20px;
+}
+
+.add__book-select {
+  padding: 0 20px;
+  width: 400px;
+  background-color: white;
+}
+
+.add__book-btn {
+  color: white;
+  background-color: #0290ff;
+  padding: 0 50px;
+  border-color: #d5d5d5;
+  font-weight: bold;
+}
+
+.wrapper {
+  background-color: #fafafa;
+  margin: 0 50px;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
