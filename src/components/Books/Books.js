@@ -1,36 +1,14 @@
 import React from "react";
 import Book from "../Book/Book";
 import BookForm from "../BookForm/BookForm";
-
+import { useSelector } from "react-redux";
 function Books(props) {
+  const { books } = useSelector((state) => state.books);
+  const booklist = books.map((book) => <Book key={book.id} {...book} />);
   return (
-    <div className="wrapper">
-      <div className="books">
-        <Book
-          type="Action"
-          title="The Hunger Games"
-          author="Suzanne Collins"
-          chapter="Chapter 17"
-          progress="64"
-        />
-        <Book
-          type="Science-Fiction"
-          title="Dune"
-          author="Frank Herbert"
-          chapter="3: `A Lesson Learned`"
-          progress="8"
-        />
-        <Book
-          type="Economy"
-          title="Capital in the Twenty-First Century"
-          author="Suzanne Collins"
-          chapter="Introduction"
-          progress="0"
-        />
-
-        <hr />
-        <BookForm />
-      </div>
+    <div>
+      {booklist}
+      <BookForm />
     </div>
   );
 }
