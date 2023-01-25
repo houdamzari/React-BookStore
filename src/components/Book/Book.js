@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./Book.css";
-
+import { useDispatch } from "react-redux";
+import { REMOVE_BOOK } from "../../redux/books/booksReducer";
 import progressCircles from "../../assets/imgs/progressCircles.png";
-function Book({ type, title, author, progress, chapter }) {
+function Book({ id, type, title, author, progress, chapter }) {
+  const dispatch = useDispatch();
   return (
     <div className="book">
       <div className="book__info">
@@ -14,7 +16,12 @@ function Book({ type, title, author, progress, chapter }) {
         <div className="book__info-buttons">
           <button className="book__info-btn">Comments </button>
           <span>|</span>
-          <button className="book__info-btn">Remove </button>
+          <button
+            className="book__info-btn"
+            onClick={() => dispatch(REMOVE_BOOK(id))}
+          >
+            Remove
+          </button>
           <span>|</span>
 
           <button className="book__info-btn">Edit</button>

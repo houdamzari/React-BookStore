@@ -4,8 +4,6 @@ const initialState = {
   categories: [],
 };
 
-// export const CHECKED_STATUS = "./redux/categories/DISPLAY_STATUS";
-
 export const checkStatus = (status) => ({
   type: types.CHECK_STATUS,
   payload: "under construction",
