@@ -1,32 +1,47 @@
 import types from "../types";
 import { createSlice } from "@reduxjs/toolkit";
 import uuid from "react-uuid";
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
+const BaseUrl =
+  "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZJbWmU4CTqw6EO1GaSWt/books/";
 const initialState = {
-  books: [
-    {
-      id: uuid(),
-      title: "Book 2",
-      category: "Action",
-      author: "Houda MZARI",
-    },
-    {
-      id: uuid(),
-      title: "Book 3",
-      category: "Science Fiction",
-      author: "Houda MZARI",
-    },
-  ],
+  books: [],
+  loading: false,
+  message: "",
 };
 
-export const addBook = (addedBook) => ({
-  type: types.ADD_BOOK,
-  payload: addedBook,
+export const fetchData = createAsyncThunk("fetchData", async () => {
+  const response = await axios.get(`${BaseUrl}`);
+  const books = Object.entries(response.data).map(([key, value]) => {
+    const { title, category, author } = value[0];
+    return {
+      Id: key,
+      title,
+      category,
+      author,
+    };
+  });
+  return books;
 });
-export const removeBook = (id) => ({
-  type: types.REMOVE_BOOK,
-  payload: id,
-});
+
+fetchData();
+
+const addBook = (payload) => async () => {
+  await fetch(`${BaseUrl}`, {
+    method: POST,
+    body: JSON.stringify(payload),
+  });
+  window.location.reload();
+};
+
+const removeBook = (payload) => async () => {
+  await fetch(`${BaseUrl}/${payload}`, {
+    method: DELETE,
+  });
+  window.location.reload();
+};
 
 const bookSlice = createSlice({
   name: "books",
@@ -40,6 +55,18 @@ const bookSlice = createSlice({
       state.books = [...state.books.filter((b) => b.id !== action.payload)];
       return state;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchData.fulfilled, (state, action) => {
+      state.loading = false;
+      state.books = action.payload;
+    });
+    builder.addCase(fetchData.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(fetchData.rejected, (state, action) => {
+      state.msg = action.payload;
+    });
   },
 });
 export const { ADD_BOOK, REMOVE_BOOK } = bookSlice.actions;
