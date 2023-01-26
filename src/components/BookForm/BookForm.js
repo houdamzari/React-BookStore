@@ -1,6 +1,7 @@
 import React from "react";
 import { ADD_BOOK } from "../../redux/books/booksReducer";
 import { useDispatch, useSelector } from "react-redux";
+import uuid from "react-uuid";
 function BookForm(props) {
   const dispatch = useDispatch();
   const { books } = useSelector((state) => state.books);
@@ -8,7 +9,7 @@ function BookForm(props) {
     e.preventDefault();
     const addedBook = {
       ...books,
-      id: 88,
+      id: uuid(),
       title: e.target[0].value,
       author: e.target[1].value,
     };

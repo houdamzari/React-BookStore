@@ -4,7 +4,7 @@ const initialState = {
   categories: [],
 };
 
-export const checkStatus = (status) => ({
+export const checkStatus = () => ({
   type: types.CHECK_STATUS,
   payload: "under construction",
 });
