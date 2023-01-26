@@ -14,7 +14,6 @@ function BookForm(props) {
       author: e.target[1].value,
     };
     dispatch(ADD_BOOK(addedBook));
-    console.log(addedBook);
     document.querySelector(".add__book-input").value = "";
     document.querySelector(".add__book-select").value = "";
   };
