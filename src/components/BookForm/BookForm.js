@@ -8,7 +8,7 @@ function BookForm(props) {
     e.preventDefault();
     const addedBook = {
       ...books,
-      id: 88,
+      id: Math.random() * 100,
       title: e.target[0].value,
       author: e.target[1].value,
     };

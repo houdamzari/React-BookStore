@@ -4,10 +4,13 @@ const initialState = {
   books: [],
 };
 
-export const addBook = (addedBook) => ({ type: types.ADD_BOOK, addedBook });
+export const addBook = (addedBook) => ({
+  type: types.ADD_BOOK,
+  payload: addedBook,
+});
 export const removeBook = (id) => ({
   type: types.REMOVE_BOOK,
-  id,
+  payload: id,
 });
 
 const bookSlice = createSlice({
