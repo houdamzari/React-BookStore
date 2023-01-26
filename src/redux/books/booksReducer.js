@@ -1,7 +1,22 @@
 import types from "../types";
 import { createSlice } from "@reduxjs/toolkit";
+import uuid from "react-uuid";
+
 const initialState = {
-  books: [],
+  books: [
+    {
+      id: uuid(),
+      title: "Book 2",
+      category: "Action",
+      author: "Houda MZARI",
+    },
+    {
+      id: uuid(),
+      title: "Book 3",
+      category: "Science Fiction",
+      author: "Houda MZARI",
+    },
+  ],
 };
 
 export const addBook = (addedBook) => ({
