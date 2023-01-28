@@ -4,12 +4,12 @@ import "./Book.css";
 import { useDispatch } from "react-redux";
 import { REMOVE_BOOK } from "../../redux/books/booksReducer";
 import progressCircles from "../../assets/imgs/progressCircles.png";
-function Book({ id, type, title, author, progress, chapter }) {
+function Book({ id, category, title, author, progress, chapter }) {
   const dispatch = useDispatch();
   return (
     <div className="book">
       <div className="book__info">
-        <span className="book__span">{type}</span>
+        <span className="book__span">{category}</span>
         <h2>{title}</h2>
         <span className="book-author">{author}</span>
 
@@ -28,14 +28,19 @@ function Book({ id, type, title, author, progress, chapter }) {
         </div>
       </div>
       <div className="book__progress">
-        <img src={progressCircles} alt="" className="book__icon" />
-        <h4 className="book__heading">
-          {progress} %<span className="book__span">Completed</span>
-        </h4>
+        <div className="book__progress-circular-progress-container">
+          <div className="book__progress-circular-progress" />
+        </div>
+        <div className="book__progress-container">
+          <p className="book__progress-container-percenatge">{progress} %</p>
+          <p className="book__progress-container-percenatge-complete">
+            Completed
+          </p>
+        </div>
       </div>
       <div>
-        <span className="book__current-chapter">CURRENT CHAPTER</span>
-        <h5 className="book__current-heading">{chapter}</h5>
+        <p className="book__current-chapter">CURRENT CHAPTER</p>
+        <p className="book__current-heading">{chapter}</p>
         <button className="book__current-btn"> UPDATE PROGRESS</button>
       </div>
     </div>

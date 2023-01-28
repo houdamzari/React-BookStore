@@ -5,9 +5,10 @@
   gap: 200px;
   font-family: "Montserrat", sans-serif;
   background-color: white;
-  margin: 0 100px;
+  margin: 10px 0;
   padding: 20px 0;
   border: 1px solid rgba(198, 198, 198, 0.99);
+  width: 100%;
 }
 
 .book__icon {
@@ -22,32 +23,44 @@
 }
 
 .book__heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 30px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  margin-top: 0.2rem;
+  font-size: 1.4rem;
+  letter-spacing: -0.2px;
+  color: #121212;
 }
 
 .book__span {
-  font-weight: 100;
-  color: #cfcfcf;
-  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  font-weight: bold;
+  color: #121212;
 }
 
 .book-author {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.9rem;
+  font-weight: 300;
   color: #4386bf;
 }
 
 .book__current-chapter {
-  color: #b1b1b1;
-  font-weight: 100;
-  font-size: 14px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: #121212;
+  opacity: 0.4;
 }
 
 .book__current-heading {
-  font-weight: 100;
+  font-weight: 300;
+  margin-top: 0.4rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 1rem;
+  color: #121212;
+  letter-spacing: -0.4px;
 }
 
 .book__current-btn {
@@ -55,6 +68,9 @@
   background-color: #0290ff;
   border: none;
   color: white;
+  border-radius: 3px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
 .book__info-buttons {
@@ -73,48 +89,58 @@
   font-weight: 100;
 }
 
-.add__book {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  margin: 0 50px 100px 50px;
-  gap: 20px;
-}
-
-.add__book-input {
-  width: 600px;
-  padding: 20px 40px;
-  border: 1px solid #d5d5d5;
-}
-
-.add__book-heading {
-  margin: 20px 50px;
-  color: #888;
-  border-top: 2px solid #d5d5d5;
-  padding-top: 20px;
-}
-
-.add__book-select {
-  padding: 0 20px;
-  width: 400px;
-  background-color: white;
-}
-
-.add__book-btn {
-  color: white;
-  background-color: #0290ff;
-  padding: 0 50px;
-  border-color: #d5d5d5;
-  font-weight: bold;
-}
-
 .wrapper {
   background-color: #fafafa;
-  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px 100px 50px;
+  padding: 0 50px;
 }
 
 .books {
   display: flex;
   flex-direction: column;
   gap: 50px;
+}
+
+.book__progress-circular-progress-container {
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book__progress-circular-progress {
+  position: absolute;
+  border: solid 5px #307bbe;
+  border-left-color: #e8e8e8;
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  transform: rotate(45deg);
+}
+
+.book__progress-container-percenatge {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #121212;
+  margin: 0;
+}
+
+.book__progress-container-percenatge-complete {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.55;
+  color: #121212;
+}
+
+.divider {
+  height: 0.125rem;
+  background-color: #e8e8e8;
+  width: 100%;
+  margin-top: 30px;
 }
