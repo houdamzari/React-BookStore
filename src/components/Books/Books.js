@@ -13,7 +13,7 @@ function Books(props) {
   }, [dispatch]);
 
   return (
-    <>
+    <section className="wrapper">
       {books.map((book) => (
         <Book
           id={book.id}
@@ -21,11 +21,15 @@ function Books(props) {
           title={book.title}
           author={book.author}
           category={book.category}
+          chapter="Introduction"
+          progress="30"
         />
       ))}
+      <div className="divider" />
+      <h2 className="add__book-heading">ADD NEW BOOK </h2>
 
       <BookForm />
-    </>
+    </section>
   );
 }
 

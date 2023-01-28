@@ -1,0 +1,57 @@
+.add__book {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.add__book-form {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 70px;
+}
+
+.add__book-input {
+  padding: 12px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+  width: 45%;
+}
+
+.add__book-select {
+  padding: 12px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+  width: 30%;
+}
+
+.add__book-btn {
+  padding: 13px 50px;
+  background-color: #0290ff;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-size: 0.813rem;
+  font-family: "Roboto Slab", serif;
+}
+
+.add__book-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+  margin-top: 40px;
+}

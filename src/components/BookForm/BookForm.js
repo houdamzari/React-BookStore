@@ -2,6 +2,7 @@ import React from "react";
 import { ADD_BOOK } from "../../redux/books/booksReducer";
 import { useDispatch, useSelector } from "react-redux";
 import uuid from "react-uuid";
+import "./BookForm.css";
 function BookForm(props) {
   const dispatch = useDispatch();
   const { books } = useSelector((state) => state.books);
@@ -18,25 +19,21 @@ function BookForm(props) {
     document.querySelector(".add__book-select").value = "";
   };
   return (
-    <>
-      <h2 className="add__book-heading">Add new Book </h2>
-
-      <form className="add__book" onSubmit={submitHandler}>
-        <input
-          type="text"
-          name=""
-          placeholder="Book title"
-          className="add__book-input"
-          required
-        />
-        <select name="Author" id="" className="add__book-select" required>
-          <option value="action">Action</option>
-          <option value="science-fiction">Science-Fiction</option>
-          <option value="economy">Economy</option>
-        </select>
-        <button className="add__book-btn">Add book</button>
-      </form>
-    </>
+    <form className="add__book-form" onSubmit={submitHandler}>
+      <input
+        type="text"
+        name=""
+        placeholder="Book title"
+        className="add__book-input"
+        required
+      />
+      <select name="Author" id="" className="add__book-select" required>
+        <option value="action">Action</option>
+        <option value="science-fiction">Science-Fiction</option>
+        <option value="economy">Economy</option>
+      </select>
+      <button className="add__book-btn">ADD BOOK</button>
+    </form>
   );
 }
 
